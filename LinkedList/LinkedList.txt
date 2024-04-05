@@ -1,0 +1,2 @@
+Linear data structure. Elements are linked using pointers (linked list elements are not stored at a contiguous location)
+Linked list consists of series of nodes connected by pointers. Each node contains data and reference to next node in the list. 
