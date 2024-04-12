@@ -34,6 +34,20 @@ class LinkedList:
             print(current.data)
             current = current.next
 
+    def delete(self, index):
+        index = index - 1
+        temp = self.head
+        if index == 1:
+            self.head = None
+            return
+        while (index and temp is not None):
+            prev = temp
+            temp = temp.next
+            index = index - 1
+        if temp is not None:
+            prev.next = temp.next
+        temp = None
+
 
 n = input("Enter number of nodes")
 n = int(n)
@@ -45,4 +59,9 @@ while n:
     ll.insert_node(d)
     n = n - 1
 
+ll.print_ll()
+
+index = input("Enter index to delete")
+index = int(index)
+ll.delete(index)
 ll.print_ll()
