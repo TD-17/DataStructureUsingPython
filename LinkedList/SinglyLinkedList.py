@@ -12,7 +12,7 @@ class Node:
         self.next = None
 
 
-class linkedList:
+class LinkedList:
 
     def __init__(self):
         self.head = None
@@ -21,7 +21,7 @@ class linkedList:
         new_node = Node(data)
         if self.head:
             current = self.head
-            while (current.next):
+            while current.next:
                 current = current.next
             current.next = new_node
 
@@ -30,7 +30,7 @@ class linkedList:
 
     def print_ll(self):
         current = self.head
-        while (current):
+        while current:
             print(current.data)
             current = current.next
 
@@ -38,11 +38,11 @@ class linkedList:
 n = input("Enter number of nodes")
 n = int(n)
 
-ll = linkedList()
+ll = LinkedList()
 
-while (n):
-    data = input()
-    ll.insert_node(data)
+while n:
+    d = input()
+    ll.insert_node(d)
     n = n - 1
 
 ll.print_ll()
