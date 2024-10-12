@@ -1,3 +1,4 @@
+#https://www.geeksforgeeks.org/stack-in-python/
 class StackNode:
 
     def __init__(self, data):
