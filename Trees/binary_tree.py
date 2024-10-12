@@ -11,13 +11,20 @@ class Node:
     def print_tree(self, root):
         q = deque()
         q.append(root)
+        ans = []
         while q:
-            temp = q.popleft()
-            print(temp.data)
-            if temp.left:
-                q.append(temp.left)
-            if temp.right:
-                q.append(temp.right)
+            l = []
+            size = len(q)
+            print("Length of q is", size)
+            for n in range(size):
+                temp = q.popleft()
+                if temp.left:
+                    q.append(temp.left)
+                if temp.right:
+                    q.append(temp.right)
+                l.append(temp.data)
+            ans.append(l)
+        print(ans)
 
 
 class Tree:
